@@ -62,7 +62,7 @@ func NewHostLookup(h map[string]string) *HostLookuper {
 
 // Lookup path by hostname of the given URL.
 func (hl *HostLookuper) Lookup(u *url.URL) string {
-	h, _ := hl.secMap[u.Hostname()]
+	h := hl.secMap[u.Hostname()]
 	return h
 }
 
